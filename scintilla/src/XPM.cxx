@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <climits>
+#include <cstdint>
 
 #include <stdexcept>
 #include <string_view>

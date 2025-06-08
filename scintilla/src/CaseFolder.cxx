@@ -8,6 +8,7 @@
 #include <stdexcept>
 #include <vector>
 #include <algorithm>
+#include <cstdint>
 
 #include "CharacterType.h"
 #include "CaseFolder.h"

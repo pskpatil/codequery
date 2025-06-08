@@ -8,6 +8,7 @@
 // Additions Copyright (c) 2011 Archaeopteryx Software, Inc. d/b/a Wingware
 // @file ScintillaEditBase.cpp - Qt widget that wraps ScintillaQt and provides events and scrolling
 
+#include <cstdint>
 #include "ScintillaEditBase.h"
 #include "ScintillaQt.h"
 #include "PlatQt.h"
@@ -383,7 +384,11 @@ void ScintillaEditBase::dragEnterEvent(QDragEnterEvent *event)
 	} else if (event->mimeData()->hasText()) {
 		event->acceptProposedAction();
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 		Point point = PointFromQPoint(event->pos());
+#else
+		Point point = PointFromQPoint(event->position().toPoint());
+#endif
 		sqt->DragEnter(point);
 	} else {
 		event->ignore();
@@ -402,7 +407,11 @@ void ScintillaEditBase::dragMoveEvent(QDragMoveEvent *event)
 	} else if (event->mimeData()->hasText()) {
 		event->acceptProposedAction();
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 		Point point = PointFromQPoint(event->pos());
+#else
+		Point point = PointFromQPoint(event->position().toPoint());
+#endif
 		sqt->DragMove(point);
 	} else {
 		event->ignore();
@@ -417,7 +426,11 @@ void ScintillaEditBase::dropEvent(QDropEvent *event)
 	} else if (event->mimeData()->hasText()) {
 		event->acceptProposedAction();
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 		Point point = PointFromQPoint(event->pos());
+#else
+		Point point = PointFromQPoint(event->position().toPoint());
+#endif
 		bool move = (event->source() == this &&
                  event->proposedAction() == Qt::MoveAction);
 		sqt->Drop(point, event->mimeData(), move);

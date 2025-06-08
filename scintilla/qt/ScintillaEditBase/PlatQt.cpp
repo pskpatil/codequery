@@ -9,6 +9,7 @@
 // Scintilla platform layer for Qt
 
 #include <cstdio>
+#include <cstdint>
 
 #include "PlatQt.h"
 #include "Scintilla.h"
@@ -1347,8 +1348,13 @@ void Platform::Assert(const char *c, const char *file, int line) noexcept
 	char buffer[2000];
 	snprintf(buffer, std::size(buffer), "Assertion [%s] failed at %s %d", c, file, line);
 	if (Platform::ShowAssertionPopUps(false)) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+		QMessageBox mb(QMessageBox::NoIcon, "Assertion Failure", buffer,
+			QMessageBox::Ok);
+#else
 		QMessageBox mb("Assertion Failure", buffer, QMessageBox::NoIcon,
 			QMessageBox::Ok, QMessageBox::NoButton, QMessageBox::NoButton);
+#endif
 		mb.exec();
 	} else {
 		strcat(buffer, "\n");

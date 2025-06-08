@@ -11,6 +11,7 @@
 #include <cstring>
 #include <cstdio>
 #include <cmath>
+#include <cstdint>
 
 #include <stdexcept>
 #include <string>

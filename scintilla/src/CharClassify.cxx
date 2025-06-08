@@ -7,6 +7,7 @@
 
 #include <cstdlib>
 #include <cassert>
+#include <cstdint>
 
 #include <stdexcept>
 

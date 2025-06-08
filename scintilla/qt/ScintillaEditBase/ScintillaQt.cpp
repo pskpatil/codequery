@@ -8,6 +8,7 @@
 // Additions Copyright (c) 2011 Archaeopteryx Software, Inc. d/b/a Wingware
 // @file ScintillaQt.cpp - Qt specific subclass of ScintillaBase
 
+#include <cstdint>
 #include "ScintillaQt.h"
 #include "PlatQt.h"
 

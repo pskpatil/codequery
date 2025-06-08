@@ -2,6 +2,7 @@
 // Extended version of ScintillaEditBase with a method for each API
 // Copyright (c) 2011 Archaeopteryx Software, Inc. d/b/a Wingware
 
+#include <cstdint>
 #include "ScintillaEdit.h"
 
 using namespace Scintilla;

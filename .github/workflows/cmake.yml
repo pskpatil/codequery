@@ -42,8 +42,8 @@ jobs:
             cxx: "g++",
           }
         - {
-            name: "Ubuntu 20.04 GCC Qt5",
-            os: ubuntu-20.04,
+            name: "Ubuntu 22.04 GCC Qt5",
+            os: ubuntu-22.04,
             build_type: "Debug",
             cc: "gcc",
             cxx: "g++"
@@ -107,8 +107,8 @@ jobs:
         run: |
           sudo apt-get install qtcreator qtbase5-dev qt5-qmake qttools5-dev-tools qttools5-dev
 
-      - name: Install dependencies on Ubuntu 20.04 GCC Qt5
-        if: "startsWith(matrix.config.name, 'Ubuntu 20.04 GCC Qt5')"
+      - name: Install dependencies on Ubuntu 22.04 GCC Qt5
+        if: "startsWith(matrix.config.name, 'Ubuntu 22.04 GCC Qt5')"
         run: |
           sudo apt-get install qt5-default qttools5-dev-tools qttools5-dev
 
@@ -172,7 +172,7 @@ jobs:
 
       - name: Configure CMake and Build on Ubuntu GCC Qt5
         shell: bash
-        if: "contains(matrix.config.name, 'Ubuntu-latest GCC Qt5') || contains(matrix.config.name, 'Ubuntu 20.04 GCC Qt5')"
+        if: "contains(matrix.config.name, 'Ubuntu-latest GCC Qt5') || contains(matrix.config.name, 'Ubuntu 22.04 GCC Qt5')"
         run: |
           export CC=gcc
           export CXX=g++

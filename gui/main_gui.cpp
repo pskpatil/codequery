@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
 	QMainWindow *wndw = new QMainWindow;
+	app.setAttribute(Qt::AA_DontUseNativeDialogs, true);
 	mainwindow mw(wndw, &app);
 
 	mw.show();

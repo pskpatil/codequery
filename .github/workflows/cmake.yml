@@ -110,7 +110,7 @@ jobs:
       - name: Install dependencies on Ubuntu 22.04 GCC Qt5
         if: "startsWith(matrix.config.name, 'Ubuntu 22.04 GCC Qt5')"
         run: |
-          sudo apt-get install qt5-default qttools5-dev-tools qttools5-dev
+          sudo apt-get install qtcreator qtbase5-dev qt5-qmake qttools5-dev-tools qttools5-dev
 
       - name: Install dependencies on macOS Clang Qt6
         if: startsWith(matrix.config.name, 'macOS Clang Qt6')

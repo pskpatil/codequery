@@ -21,7 +21,13 @@ int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
 	QMainWindow *wndw = new QMainWindow;
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#if defined(__unix__) || defined(__linux__)
 	app.setAttribute(Qt::AA_DontUseNativeDialogs, true);
+#endif
+#endif
+
 	mainwindow mw(wndw, &app);
 
 	mw.show();

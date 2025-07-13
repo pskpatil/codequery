@@ -13,7 +13,7 @@
 #ifndef SWVER_H_CQ
 #define SWVER_H_CQ
 
-#define CODEQUERY_SW_VERSION      "CodeQuery 1.0.0"
+#define CODEQUERY_SW_VERSION      "CodeQuery 1.0.1"
 #define CODEQUERY_SW_VERSION_WEBSITE      "<p>"\
 	CODEQUERY_SW_VERSION \
 	"</p>"\
@@ -22,7 +22,7 @@
 
 
 #define CODEQUERY_SW_LICENSE  \
-"Copyright (C) 2013-2024 ruben2020 https://github.com/ruben2020/\n\n" \
+"Copyright (C) 2013-2025 ruben2020 https://github.com/ruben2020/\n\n" \
 "Website: https://github.com/ruben2020/codequery\n\n" \
 "The Source Code Form and the Executable Form of this software\n" \
 "are subject to the terms of the Mozilla Public License, v. 2.0.\n" \
@@ -36,7 +36,7 @@
 "Mozilla Public License, v. 2.0 for more details.\n\n" \
 
 #define CODEQUERY_SW_LICENSE_PARA  \
-"Copyright (C) 2013-2024 ruben2020 https://github.com/ruben2020/\n\n" \
+"Copyright (C) 2013-2025 ruben2020 https://github.com/ruben2020/\n\n" \
 "Website: https://github.com/ruben2020/codequery\n\n" \
 "The Source Code Form and the Executable Form of this software " \
 "are subject to the terms of the Mozilla Public License, v. 2.0. " \
